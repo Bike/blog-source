@@ -1,0 +1,8 @@
+<% render '/default.html' do %>
+<div class='post'>
+  <h1><%= item[:title] %></h1>
+  <article>
+    <%= yield %>
+  </article>
+</div>
+<% end %>

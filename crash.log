@@ -1,0 +1,103 @@
+Crashlog created at 2016-07-20 20:08:52 -0700
+
+===== MESSAGE:
+
+NoMethodError: undefined method `[]' for nil:NilClass
+
+===== COMPILATION STACK:
+
+  - [item]   /posts/first-post.md (rep default)
+
+===== STACK TRACE:
+
+  0. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/rule_dsl/rule_memory_calculator.rb:88:in `block in new_rule_memory_for_layout'
+  1. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/rule_dsl/rule_memory_calculator.rb:87:in `tap'
+  2. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/rule_dsl/rule_memory_calculator.rb:87:in `new_rule_memory_for_layout'
+  3. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/rule_dsl/rule_memory_calculator.rb:36:in `[]'
+  4. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/memoization.rb:87:in `block in memoize'
+  5. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/rule_dsl/action_provider.rb:36:in `memory_for'
+  6. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/compilation/compiler.rb:173:in `filter_name_and_args_for_layout'
+  7. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/services/executor.rb:47:in `layout'
+  8. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/compilation/compiler.rb:255:in `block in recalculate_content_for_rep'
+  9. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/entities/rule_memory.rb:57:in `block in each'
+  10. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/entities/rule_memory.rb:57:in `each'
+  11. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/entities/rule_memory.rb:57:in `each'
+  12. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/compilation/compiler.rb:250:in `recalculate_content_for_rep'
+  13. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/compilation/compiler.rb:225:in `compile_rep'
+  14. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/compilation/compiler.rb:198:in `block in compile_reps'
+  15. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/services/item_rep_selector.rb:18:in `block in each'
+  16. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/services/item_rep_selector.rb:13:in `loop'
+  17. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/services/item_rep_selector.rb:13:in `each'
+  18. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/compilation/compiler.rb:196:in `compile_reps'
+  19. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/compilation/compiler.rb:89:in `run'
+  20. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/compilation/compiler.rb:77:in `run_all'
+  21. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/base/entities/site.rb:30:in `compile'
+  22. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/cli/commands/compile.rb:367:in `block in run'
+  23. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/cli/commands/compile.rb:409:in `run_listeners_while'
+  24. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/cli/commands/compile.rb:366:in `run'
+  25. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/cli/command_runner.rb:12:in `block in call'
+  26. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/cli/error_handler.rb:64:in `handle_while'
+  27. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/cli/error_handler.rb:22:in `handle_while'
+  28. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/cli/command_runner.rb:11:in `call'
+  29. /home/aeshtaer/.gem/ruby/2.3.0/gems/cri-2.7.0/lib/cri/command_dsl.rb:233:in `block in runner'
+  30. /home/aeshtaer/.gem/ruby/2.3.0/gems/cri-2.7.0/lib/cri/command.rb:294:in `run_this'
+  31. /home/aeshtaer/.gem/ruby/2.3.0/gems/cri-2.7.0/lib/cri/command.rb:247:in `run'
+  32. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/cli/commands/nanoc.rb:37:in `block in define'
+  33. /home/aeshtaer/.gem/ruby/2.3.0/gems/cri-2.7.0/lib/cri/command.rb:294:in `run_this'
+  34. /home/aeshtaer/.gem/ruby/2.3.0/gems/cri-2.7.0/lib/cri/command.rb:247:in `run'
+  35. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/cli.rb:53:in `block in run'
+  36. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/cli/error_handler.rb:64:in `handle_while'
+  37. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/cli/error_handler.rb:22:in `handle_while'
+  38. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib/nanoc/cli.rb:51:in `run'
+  39. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/bin/nanoc:9:in `<top (required)>'
+  40. /home/aeshtaer/.gem/ruby/2.3.0/bin/nanoc:23:in `load'
+
+===== VERSION INFORMATION:
+
+Nanoc 4.2.3 © 2007-2016 Denis Defreyne.
+Running ruby 2.3.1 (2016-04-26) on x86_64-linux with RubyGems 2.5.1.
+
+===== SYSTEM INFORMATION:
+
+Linux Syadavaktavyah 4.6.4-1-ARCH #1 SMP PREEMPT Mon Jul 11 19:12:32 CEST 2016 x86_64 GNU/Linux
+
+===== INSTALLED GEMS:
+
+  adsf 1.2.1
+  bigdecimal 1.2.8
+  bundler 1.12.5
+  colored 1.2
+  concurrent-ruby 1.0.2
+  cri 2.7.0
+  did_you_mean 1.0.0
+  hamster 3.0.0
+  io-console 0.4.5
+  json 1.8.3
+  kramdown 1.11.1
+  minitest 5.8.3
+  nanoc 4.2.3
+  net-telnet 0.1.1
+  power_assert 0.2.6
+  psych 2.0.17
+  rack 2.0.1
+  rake 10.4.2
+  rdoc 4.2.1
+  test-unit 3.1.5
+
+===== LOAD PATHS:
+
+  0. /usr/lib/ruby/gems/2.3.0/gems/did_you_mean-1.0.0/lib
+  1. /home/aeshtaer/.gem/ruby/2.3.0/gems/colored-1.2/lib
+  2. /home/aeshtaer/.gem/ruby/2.3.0/gems/cri-2.7.0/lib
+  3. /home/aeshtaer/.gem/ruby/2.3.0/gems/concurrent-ruby-1.0.2/lib
+  4. /home/aeshtaer/.gem/ruby/2.3.0/gems/hamster-3.0.0/lib
+  5. /home/aeshtaer/.gem/ruby/2.3.0/gems/nanoc-4.2.3/lib
+  6. /home/aeshtaer/.gem/ruby/2.3.0/gems/kramdown-1.11.1/lib
+  7. /usr/lib/ruby/site_ruby/2.3.0
+  8. /usr/lib/ruby/site_ruby/2.3.0/x86_64-linux
+  9. /usr/lib/ruby/site_ruby
+  10. /usr/lib/ruby/vendor_ruby/2.3.0
+  11. /usr/lib/ruby/vendor_ruby/2.3.0/x86_64-linux
+  12. /usr/lib/ruby/vendor_ruby
+  13. /usr/lib/ruby/2.3.0
+  14. /usr/lib/ruby/2.3.0/x86_64-linux

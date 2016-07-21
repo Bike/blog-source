@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+
+compile '/stylesheet.css' do
+  # nothing
+end
+
+compile '/posts/*.md' do
+  filter :kramdown
+  layout '/post.html'
+end
+
+compile '/*' do
+  if item.binary?
+    # do nothing
+  else
+    filter :erb
+    layout '/default.html'
+  end
+end
+
+route '/stylesheet.css' do
+  '/stylesheet.css'
+end
+
+route '/posts/*.md' do
+  "/blog/title/#{item.identifier}.html"
+end
+
+route '/*' do
+  if item.binary?
+    # Add extension
+    item.identifier.chop + '.' + item[:extension]
+  else
+    # Add index.html extension
+    item.identifier + 'index.html'
+  end
+end
+
+layout '*', :erb
