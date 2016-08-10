@@ -13,6 +13,12 @@ text_extensions: [ 'adoc', 'asciidoc', 'atom', 'coffee', 'css', 'erb', 'haml', '
 # relative to the site directory.
 output_dir: output
 
+# Configuration for the Atom feed
+base_url: "https://bike.github.io"
+title: "кракозя́бры"
+author_name: "None"
+author_uri: "https://bike.github.io"
+
 # A list of index filenames, i.e. names of files that will be served by a web
 # server when a directory is requested. Usually, index files are named
 # “index.html”, but depending on the web server, this may be something else,
