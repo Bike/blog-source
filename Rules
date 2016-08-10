@@ -9,7 +9,11 @@ compile '/posts/*.md' do
   layout '/post.html'
 end
 
-compile '/*' do
+compile '/atom.xml' do
+  filter :erb
+end
+
+compile '/**/*' do
   if item.binary?
     # do nothing
   else
@@ -18,20 +22,12 @@ compile '/*' do
   end
 end
 
-route '/stylesheet.css' do
-  '/stylesheet.css'
-end
-
 route '/posts/*.md' do
   "#{item.identifier.without_ext}.html"
 end
 
-route '/*' do
-  if item.binary?
-    item.identifier + "" # convert to string
-  else
-    item.identifier + ""
-  end
+route '/**/*' do
+  item.identifier.to_s
 end
 
-layout '/*', :erb
+layout '/**/*', :erb
