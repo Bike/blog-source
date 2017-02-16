@@ -99,3 +99,9 @@ a:hover {
 
   line-height: 20px;
 }
+
+code {
+    font-family: Courier, 'New Courier', monospace;
+    white-space: pre-wrap;
+    font-size: 12px;
+}
